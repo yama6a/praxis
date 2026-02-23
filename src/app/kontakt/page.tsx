@@ -72,7 +72,7 @@ export default function KontaktPage() {
               </h2>
             </div>
             <form
-              action="https://formsubmit.co/theyama6a@gmail.com"
+              action="https://formsubmit.co/maehner.birgit@gmail.com"
               method="POST"
               className="space-y-3"
             >
