@@ -94,8 +94,12 @@ export function LocalBusinessJsonLd() {
       jobTitle: "Heilpraktikerin und Yogalehrerin",
     },
     areaServed: {
-      "@type": "City",
-      name: "Berlin",
+      "@type": "Place",
+      name: "Berlin Charlottenburg",
+      containedInPlace: {
+        "@type": "City",
+        name: "Berlin",
+      },
     },
     priceRange: "€€",
     makesOffer: [
@@ -159,8 +163,12 @@ export function ServiceJsonLd({
     url: `${SITE_URL}${url}`,
     provider: { "@id": `${SITE_URL}/#business` },
     areaServed: {
-      "@type": "City",
-      name: "Berlin",
+      "@type": "Place",
+      name: "Berlin Charlottenburg",
+      containedInPlace: {
+        "@type": "City",
+        name: "Berlin",
+      },
     },
   };
 
