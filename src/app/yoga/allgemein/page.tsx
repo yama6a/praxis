@@ -15,8 +15,7 @@ export default function YogaAllgemeinPage() {
         </h1>
 
         <div className="bg-surface-light rounded-2xl border border-border p-6 mb-10">
-          <div className="flex flex-col sm:flex-row gap-6">
-          <div className="flex-1">
+          <div>
             <h2 className="text-lg font-display font-bold text-gray-900 mb-3">
               Kurszeiten
             </h2>
@@ -27,17 +26,6 @@ export default function YogaAllgemeinPage() {
               <p>Dienstags: 17:30 – 18:45</p>
               <p>Mittwochs: 17:00 – 18:15</p>
             </div>
-          </div>
-          <div className="sm:border-l sm:border-border sm:pl-6">
-            <h2 className="text-lg font-display font-bold text-gray-900 mb-3">
-              Preise
-            </h2>
-            <div className="space-y-1 text-gray-700">
-              <p>Monatsbeitrag: <span className="font-bold text-primary">77 €</span></p>
-              <p>Einzelne Stunde: <span className="font-bold text-primary">22 €</span></p>
-              <p>Krankenkassenkurs (10 Termine): <span className="font-bold text-primary">170 €</span></p>
-            </div>
-          </div>
           </div>
           <div className="text-center mt-4 pt-4 border-t border-border">
             <Link

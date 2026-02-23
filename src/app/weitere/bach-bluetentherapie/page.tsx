@@ -14,21 +14,13 @@ export default function BachBluetentherapiePage() {
           Bach-Blütentherapie
         </h1>
 
-        <div className="bg-surface-light rounded-2xl border border-border p-6 mb-10">
-          <h2 className="text-lg font-display font-bold text-gray-900 mb-3">
-            Preis
-          </h2>
-          <div className="text-gray-700">
-            <p>Bach-Blüten-Beratung (30 Min.): <span className="font-bold text-primary">35 €</span></p>
-          </div>
-          <div className="text-center mt-4 pt-4 border-t border-border">
-            <Link
-              href="/kontakt"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full text-white bg-primary hover:bg-opacity-90 transition-all shadow-sm"
-            >
-              Termin vereinbaren
-            </Link>
-          </div>
+        <div className="text-center mb-10">
+          <Link
+            href="/kontakt"
+            className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full text-white bg-primary hover:bg-opacity-90 transition-all shadow-sm"
+          >
+            Termin vereinbaren
+          </Link>
         </div>
 
         <div className="text-lg text-gray-700 leading-relaxed">

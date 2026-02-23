@@ -25,7 +25,7 @@ export const navigationItems: NavItem[] = [
     icon: MdSelfImprovement,
     items: [
       { label: "Yoga Allgemein", href: "/yoga/allgemein" },
-      { label: "Yoga auf dem Stuhl", href: "/yoga/stuhl" },
+      { label: "Yoga-Therapie", href: "/yoga/therapie" },
     ],
   },
   {

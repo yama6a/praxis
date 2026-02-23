@@ -98,6 +98,11 @@ export default function PreisePage() {
                 detail: "10 Termine",
                 price: "170 €",
               },
+              {
+                label: "Yoga-Therapie",
+                detail: "pro Stunde",
+                price: "75 €",
+              },
             ]}
             note="Alle Krankenkassen übernehmen zwischen 75 und 170 €."
           />
@@ -129,17 +134,17 @@ export default function PreisePage() {
               {
                 label: "Bach-Blüten-Beratung",
                 detail: "30 Minuten",
-                price: "35 €",
+                price: "50 €",
               },
               {
                 label: "Fußreflexzonenmassage",
                 detail: "30 Minuten",
-                price: "45 €",
+                price: "50 €",
               },
               {
                 label: "Schröpfen",
                 detail: "ca. 30 Minuten",
-                price: "40 €",
+                price: "50 €",
               },
             ]}
           />

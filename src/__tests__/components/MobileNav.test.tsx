@@ -36,7 +36,7 @@ describe("MobileNav", () => {
     await screen.findByText("Menü");
     await user.click(screen.getByText("Yoga"));
     expect(await screen.findByText("Yoga Allgemein")).toBeInTheDocument();
-    expect(await screen.findByText("Yoga auf dem Stuhl")).toBeInTheDocument();
+    expect(await screen.findByText("Yoga-Therapie")).toBeInTheDocument();
   });
 
   it("closes the sheet when a link is clicked", async () => {
