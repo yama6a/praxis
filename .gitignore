@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# generated redirect pages
+/public/wp/
+
 # production
 /build
 
