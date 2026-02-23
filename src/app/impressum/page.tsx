@@ -5,6 +5,7 @@ import { ObfuscatedEmail } from "./ObfuscatedEmail";
 
 export const metadata: Metadata = {
   title: "Impressum – Ganzheitliche Körpertherapie",
+  robots: "noindex",
 };
 
 export default function ImpressumPage() {

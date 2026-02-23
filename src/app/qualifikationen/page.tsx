@@ -9,6 +9,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Qualifikationen – Ganzheitliche Körpertherapie",
+  robots: "noindex",
 };
 
 export default function QualifikationenPage() {
