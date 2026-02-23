@@ -1,13 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Fußreflexzonenmassage – Ganzheitliche Körpertherapie",
+  title: "Fußreflexzonenmassage",
+  description:
+    "Fußreflexzonenmassage in Berlin Charlottenburg. Druckmassage zur Schmerzlinderung und Förderung des Wohlbefindens bei Heilpraktikerin Birgit Mähner.",
+  alternates: { canonical: "/weitere/fussreflexzonenmassage/" },
 };
 
 export default function FussreflexzonenmassagePage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Fußreflexzonenmassage"
+        url="/weitere/fussreflexzonenmassage/"
+        description="Fußreflexzonenmassage in Berlin Charlottenburg. Druckmassage zur Schmerzlinderung und Förderung des Wohlbefindens bei Heilpraktikerin Birgit Mähner."
+        mainEntityId="https://www.birgit-maehner.de/weitere/fussreflexzonenmassage/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Weitere Angebote", href: "/" },
+          { name: "Fußreflexzonenmassage", href: "/weitere/fussreflexzonenmassage/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Fußreflexzonenmassage"
+        description="Druckmassage an den Füßen nach der Methode von Hanne Marquardt. Lindert Schmerzen und verbessert Beschwerden wie Migräne, Verdauungsprobleme und Schwindel. Fördert allgemeines Wohlbefinden und Entspannung."
+        url="/weitere/fussreflexzonenmassage/"
+        additionalType="https://de.wikipedia.org/wiki/Fu%C3%9Freflexzonenmassage"
+        serviceType="Fußreflexzonenmassage"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Fußreflexzonenmassage
@@ -49,5 +74,6 @@ export default function FussreflexzonenmassagePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

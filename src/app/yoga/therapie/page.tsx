@@ -1,13 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Yoga-Therapie – Ganzheitliche Körpertherapie",
+  title: "Yoga-Therapie",
+  description:
+    "Individuelle Yoga-Therapie bei Rückenschmerzen, Verspannungen und Stress. Persönliches Übungsprogramm in Berlin Charlottenburg.",
+  alternates: { canonical: "/yoga/therapie/" },
 };
 
 export default function YogaTherapiePage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Yoga-Therapie"
+        url="/yoga/therapie/"
+        description="Individuelle Yoga-Therapie bei Rückenschmerzen, Verspannungen und Stress. Persönliches Übungsprogramm in Berlin Charlottenburg."
+        mainEntityId="https://www.birgit-maehner.de/yoga/therapie/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Yoga-Therapie", href: "/yoga/therapie/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Yoga-Therapie"
+        description="Individueller ganzheitlicher Ansatz mit gezielten Yoga-Übungen für persönliche Beschwerden. Persönliches Übungsprogramm aus Asanas, Pranayama und Entspannungsmethoden bei Rückenschmerzen, Verspannungen, Stress und Schlafproblemen."
+        url="/yoga/therapie/"
+        additionalType="https://de.wikipedia.org/wiki/Yogatherapie"
+        serviceType="Yoga-Therapie"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Yoga-Therapie
@@ -48,5 +72,6 @@ export default function YogaTherapiePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

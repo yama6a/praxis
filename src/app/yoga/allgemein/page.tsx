@@ -1,18 +1,42 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Yoga Allgemein – Ganzheitliche Körpertherapie",
+  title: "Yoga Allgemein",
+  description:
+    "Yoga-Kurse in kleinen Gruppen in Berlin Charlottenburg. Asanas, Pranayama und Meditation bei Heilpraktikerin Birgit Mähner.",
+  alternates: { canonical: "/yoga/allgemein/" },
 };
 
 export default function YogaAllgemeinPage() {
   return (
-    <div className="pt-28 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-display font-bold text-primary mb-10">
-          Yoga Allgemein
-        </h1>
+    <>
+      <WebPageJsonLd
+        name="Yoga Allgemein"
+        url="/yoga/allgemein/"
+        description="Yoga-Kurse in kleinen Gruppen in Berlin Charlottenburg. Asanas, Pranayama und Meditation bei Heilpraktikerin Birgit Mähner."
+        mainEntityId="https://www.birgit-maehner.de/yoga/allgemein/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Yoga Allgemein", href: "/yoga/allgemein/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Yoga-Kurse"
+        description="Yoga-Kurse in kleinen Gruppen mit max. 8 Personen. Asanas, Pranayama, Meditation und Tiefenentspannung. Behutsamer Aufbau der Übungen, angepasst an individuelle Bedürfnisse und Fähigkeiten."
+        url="/yoga/allgemein/"
+        additionalType="https://de.wikipedia.org/wiki/Yoga"
+        serviceType="Yoga"
+      />
+      <div className="pt-28 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-display font-bold text-primary mb-10">
+            Yoga Allgemein
+          </h1>
 
         <div className="bg-surface-light rounded-2xl border border-border p-6 mb-10">
           <div>
@@ -111,7 +135,8 @@ export default function YogaAllgemeinPage() {
           height={640}
           className="rounded-xl object-cover w-full mt-10"
         />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

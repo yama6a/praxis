@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 
 export const metadata: Metadata = {
-  title: "Qualifikationen – Ganzheitliche Körpertherapie",
+  title: "Qualifikationen",
   robots: "noindex",
 };
 

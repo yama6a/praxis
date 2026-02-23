@@ -1,14 +1,38 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Shiatsu in Betrieben – Ganzheitliche Körpertherapie",
+  title: "Shiatsu in Betrieben",
+  description:
+    "Shiatsu am Arbeitsplatz in Berlin. Stuhl-Shiatsu zur Stressreduktion und Gesundheitsförderung für Unternehmen und Betriebe.",
+  alternates: { canonical: "/shiatsu/betriebe/" },
 };
 
 export default function ShiatsuBetriebePage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Shiatsu in Betrieben"
+        url="/shiatsu/betriebe/"
+        description="Shiatsu am Arbeitsplatz in Berlin. Stuhl-Shiatsu zur Stressreduktion und Gesundheitsförderung für Unternehmen und Betriebe."
+        mainEntityId="https://www.birgit-maehner.de/shiatsu/betriebe/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Shiatsu in Betrieben", href: "/shiatsu/betriebe/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Shiatsu in Betrieben"
+        description="Betriebliche Gesundheitsförderung mit Shiatsu auf dem Stuhl. Akupressur direkt am Arbeitsplatz ohne Umziehen – baut krankmachenden Stress ab und löst Verspannungen. Der Shiatsu-Stuhl wird mitgebracht."
+        url="/shiatsu/betriebe/"
+        additionalType="https://de.wikipedia.org/wiki/Shiatsu"
+        serviceType="Betriebliches Shiatsu"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-8">
           Shiatsu in Betrieben
@@ -75,5 +99,6 @@ export default function ShiatsuBetriebePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

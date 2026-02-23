@@ -1,13 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Schröpfen – Ganzheitliche Körpertherapie",
+  title: "Schröpfen",
+  description:
+    "Schröpftherapie in Berlin Charlottenburg. Traditionelles Schröpfen zur Durchblutungsanregung und Linderung von Beschwerden bei Heilpraktikerin Birgit Mähner.",
+  alternates: { canonical: "/weitere/schroepfen/" },
 };
 
 export default function SchroepfenPage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Schröpfen"
+        url="/weitere/schroepfen/"
+        description="Schröpftherapie in Berlin Charlottenburg. Traditionelles Schröpfen zur Durchblutungsanregung und Linderung von Beschwerden bei Heilpraktikerin Birgit Mähner."
+        mainEntityId="https://www.birgit-maehner.de/weitere/schroepfen/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Weitere Angebote", href: "/" },
+          { name: "Schröpfen", href: "/weitere/schroepfen/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Schröpftherapie"
+        description="Traditionelles Schröpfen mit Glaskugeln unter Vakuum. Regt die Durchblutung an, löst Reaktionen in zugehörigen Organen aus und aktiviert die Selbstheilungskräfte zur Linderung unterschiedlicher Beschwerden."
+        url="/weitere/schroepfen/"
+        additionalType="https://de.wikipedia.org/wiki/Schr%C3%B6pfen"
+        serviceType="Schröpfen"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Schröpfen
@@ -36,5 +61,6 @@ export default function SchroepfenPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Haftungsausschluss & Datenschutz – Ganzheitliche Körpertherapie",
+  title: "Haftungsausschluss & Datenschutz",
   robots: "noindex",
 };
 

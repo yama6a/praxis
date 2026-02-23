@@ -10,14 +10,31 @@ import {
   MdSend,
 } from "react-icons/md";
 import { ObfuscatedEmail } from "@/app/impressum/ObfuscatedEmail";
+import { LocalBusinessJsonLd, BreadcrumbJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Kontakt & Anfahrt – Ganzheitliche Körpertherapie",
+  title: "Kontakt & Anfahrt",
+  description:
+    "Kontakt und Anfahrt zur Praxis in Berlin Charlottenburg. Knobelsdorffstr. 34, 14059 Berlin. U-Bhf Sophie-Charlotte-Platz.",
+  alternates: { canonical: "/kontakt/" },
 };
 
 export default function KontaktPage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <LocalBusinessJsonLd />
+      <WebPageJsonLd
+        name="Kontakt & Anfahrt"
+        url="/kontakt/"
+        description="Kontakt und Anfahrt zur Praxis in Berlin Charlottenburg. Knobelsdorffstr. 34, 14059 Berlin. U-Bhf Sophie-Charlotte-Platz."
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Kontakt & Anfahrt", href: "/kontakt/" },
+        ]}
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Kontakt & Anfahrt
@@ -201,5 +218,6 @@ export default function KontaktPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

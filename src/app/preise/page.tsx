@@ -7,9 +7,13 @@ import {
   MdLocalFlorist,
 } from "react-icons/md";
 import type { IconType } from "react-icons";
+import { BreadcrumbJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Preise – Ganzheitliche Körpertherapie",
+  title: "Preise",
+  description:
+    "Preise für Yoga, Shiatsu, Bach-Blütentherapie, Fußreflexzonenmassage und Schröpfen. Praxis Birgit Mähner in Berlin Charlottenburg.",
+  alternates: { canonical: "/preise/" },
 };
 
 type PriceEntry = {
@@ -76,11 +80,23 @@ function PriceCard({
 
 export default function PreisePage() {
   return (
-    <div className="pt-28 pb-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-display font-bold text-primary mb-2">
-          Preise
-        </h1>
+    <>
+      <WebPageJsonLd
+        name="Preise"
+        url="/preise/"
+        description="Preise für Yoga, Shiatsu, Bach-Blütentherapie, Fußreflexzonenmassage und Schröpfen. Praxis Birgit Mähner in Berlin Charlottenburg."
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Preise", href: "/preise/" },
+        ]}
+      />
+      <div className="pt-28 pb-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-display font-bold text-primary mb-2">
+            Preise
+          </h1>
         <p className="text-lg text-gray-600 mb-12">
           Übersicht der Preise für alle Angebote meiner Praxis.
         </p>
@@ -209,5 +225,6 @@ export default function PreisePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

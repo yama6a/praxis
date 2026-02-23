@@ -1,14 +1,38 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Shiatsu Allgemein – Ganzheitliche Körpertherapie",
+  title: "Shiatsu Allgemein",
+  description:
+    "Shiatsu-Behandlung in Berlin Charlottenburg. Japanische Körpertherapie nach TCM-Meridiansystem bei Heilpraktikerin Birgit Mähner.",
+  alternates: { canonical: "/shiatsu/allgemein/" },
 };
 
 export default function ShiatsuAllgemeinPage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Shiatsu Allgemein"
+        url="/shiatsu/allgemein/"
+        description="Shiatsu-Behandlung in Berlin Charlottenburg. Japanische Körpertherapie nach TCM-Meridiansystem bei Heilpraktikerin Birgit Mähner."
+        mainEntityId="https://www.birgit-maehner.de/shiatsu/allgemein/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Shiatsu Allgemein", href: "/shiatsu/allgemein/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Shiatsu-Behandlung"
+        description="Japanische Körpertherapie basierend auf Traditioneller Chinesischer Medizin und dem Meridiansystem. Behandlung mit Daumen, Handballen, Unterarmen und Ellbogen entlang der Energiebahnen. Aktivierung der Selbstheilungskräfte, ergänzt durch Bach-Blüten und individuelle Yogaübungen."
+        url="/shiatsu/allgemein/"
+        additionalType="https://de.wikipedia.org/wiki/Shiatsu"
+        serviceType="Shiatsu"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Shiatsu Allgemein
@@ -118,5 +142,6 @@ export default function ShiatsuAllgemeinPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,14 +1,39 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MdFormatQuote, MdLocalFlorist } from "react-icons/md";
+import { BreadcrumbJsonLd, ServiceJsonLd, WebPageJsonLd } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Bach-Blütentherapie – Ganzheitliche Körpertherapie",
+  title: "Bach-Blütentherapie",
+  description:
+    "Bach-Blütentherapie in Berlin Charlottenburg. 38 Blütenessenzen nach Dr. Edward Bach für seelisches Gleichgewicht bei Heilpraktikerin Birgit Mähner.",
+  alternates: { canonical: "/weitere/bach-bluetentherapie/" },
 };
 
 export default function BachBluetentherapiePage() {
   return (
-    <div className="pt-28 pb-16">
+    <>
+      <WebPageJsonLd
+        name="Bach-Blütentherapie"
+        url="/weitere/bach-bluetentherapie/"
+        description="Bach-Blütentherapie in Berlin Charlottenburg. 38 Blütenessenzen nach Dr. Edward Bach für seelisches Gleichgewicht bei Heilpraktikerin Birgit Mähner."
+        mainEntityId="https://www.birgit-maehner.de/weitere/bach-bluetentherapie/#service"
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Startseite", href: "/" },
+          { name: "Weitere Angebote", href: "/" },
+          { name: "Bach-Blütentherapie", href: "/weitere/bach-bluetentherapie/" },
+        ]}
+      />
+      <ServiceJsonLd
+        name="Bach-Blütentherapie"
+        description="Naturheilkundliche Therapie mit 38 Blütenessenzen nach Dr. Edward Bach. Die Essenzen entsprechen archetypischen Gemütszuständen und geben einen Impuls zur positiven Veränderung für seelisches Gleichgewicht."
+        url="/weitere/bach-bluetentherapie/"
+        additionalType="https://de.wikipedia.org/wiki/Bachbl%C3%BCtentherapie"
+        serviceType="Bach-Blütentherapie"
+      />
+      <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-display font-bold text-primary mb-10">
           Bach-Blütentherapie
@@ -54,5 +79,6 @@ export default function BachBluetentherapiePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

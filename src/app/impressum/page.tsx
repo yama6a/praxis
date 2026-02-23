@@ -4,7 +4,7 @@ import { MdPlace, MdPhone, MdEmail, MdBadge, MdGavel } from "react-icons/md";
 import { ObfuscatedEmail } from "./ObfuscatedEmail";
 
 export const metadata: Metadata = {
-  title: "Impressum – Ganzheitliche Körpertherapie",
+  title: "Impressum",
   robots: "noindex",
 };
 
