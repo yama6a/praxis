@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /haftungsausschluss/
-Disallow: /impressum/
 
 Sitemap: https://www.birgit-maehner.de/sitemap.xml

@@ -25,6 +25,8 @@ const pages: SitemapEntry[] = [
   { path: "/preise/", priority: 0.8, changefreq: "monthly" },
   { path: "/kontakt/", priority: 0.9, changefreq: "monthly" },
   { path: "/raeumlichkeiten/", priority: 0.5, changefreq: "yearly" },
+  { path: "/qualifikationen/", priority: 0.5, changefreq: "yearly" },
+  { path: "/impressum/", priority: 0.3, changefreq: "yearly" },
 ];
 
 const lastmod = new Date().toISOString().split("T")[0];
