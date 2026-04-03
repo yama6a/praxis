@@ -108,7 +108,7 @@ export default function PreisePage() {
             title="Yoga"
             entries={[
               { label: "Monatsbeitrag", price: "77 €" },
-              { label: "Einzelne Stunde", price: "22 €" },
+              { label: "Einzelne Stunde", price: "25 €" },
               {
                 label: "Krankenkassenkurs",
                 detail: "10 Termine",

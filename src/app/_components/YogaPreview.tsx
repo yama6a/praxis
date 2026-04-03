@@ -33,7 +33,7 @@ export function YogaPreview() {
             <FeatureList
               icon={MdCheckCircle}
               items={[
-                "Hatha Yoga & Vinyasa Flow",
+                "Hatha Yoga",
                 "Kleine Gruppen für individuelle Betreuung",
                 "Kurse am Morgen und Abend",
               ]}
