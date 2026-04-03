@@ -23,7 +23,7 @@ export function InfoBanner() {
               <DialogTrigger asChild>
                 <button className="shrink-0 cursor-zoom-in rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow sm:w-1/3">
                   <Image
-                    src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerOmVm2d5PsUaGD6s3OcWj3Vs0OQ8sMe2FAfFeXoJ2YrRPyBKqzoJfd2sgVrAFjFqWotlEq6odxaKE2P1NwynxVV9pQhXnXIoDLc6-ZgpTexgMM2bTuifAIAE9HDq_Pk2NrS7EvHA=s4000"
+                    src="/images/lehnin.jpeg"
                     alt="Kloster Lehnin – Wochenend-Retreat"
                     width={300}
                     height={200}
@@ -39,7 +39,7 @@ export function InfoBanner() {
                   Foto vom Kloster Lehnin
                 </DialogDescription>
                 <Image
-                  src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerOmVm2d5PsUaGD6s3OcWj3Vs0OQ8sMe2FAfFeXoJ2YrRPyBKqzoJfd2sgVrAFjFqWotlEq6odxaKE2P1NwynxVV9pQhXnXIoDLc6-ZgpTexgMM2bTuifAIAE9HDq_Pk2NrS7EvHA=s4000"
+                  src="/images/lehnin.jpeg"
                   alt="Kloster Lehnin – Wochenend-Retreat"
                   width={1600}
                   height={1067}
