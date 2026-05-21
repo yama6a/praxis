@@ -63,11 +63,11 @@ export default function YogaAllgemeinPage() {
 
         <div className="text-lg text-gray-700 leading-relaxed">
           <Image
-            src="/images/yoga1.jpg"
+            src="/images/yoga.png"
             alt="Yoga-Gruppe in Meditation"
             width={640}
             height={480}
-            className="rounded-xl object-cover w-full sm:w-1/3 sm:float-left sm:mr-6 mb-4"
+            className="rounded-xl object-cover w-full sm:w-2/5 sm:float-left sm:mr-6 mb-4"
           />
           <p className="mb-8">
             Der indische Weise Patanjali (ca. 400 n.Chr.) hat in seinen
@@ -95,13 +95,6 @@ export default function YogaAllgemeinPage() {
             vollständig verschwinden.
           </p>
 
-          <Image
-            src="/images/yoga3.jpg"
-            alt="Dehnübungen auf der Matte"
-            width={640}
-            height={480}
-            className="rounded-xl object-cover w-full sm:w-1/3 sm:float-left sm:mr-6 mb-4"
-          />
           <p className="mb-8">
             Jedoch nicht nur für den Körper, der in der indischen Philosophie als
             Tempel der Seele betrachtet wird, sondern auch für das
@@ -114,6 +107,13 @@ export default function YogaAllgemeinPage() {
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-4">
             Besonderheiten meiner Yoga-Kurse
           </h2>
+          <Image
+            src="/images/yoga3.jpg"
+            alt="Dehnübungen auf der Matte"
+            width={640}
+            height={480}
+            className="rounded-xl object-cover w-full sm:w-1/3 sm:float-left sm:mr-6 mb-4"
+          />
           <p>
             Yoga wird in kleinen Gruppen mit max. acht Personen unterrichtet. Es
             werden Übungen miteinbezogen, die auf die persönlichen Bedürfnisse
@@ -127,14 +127,6 @@ export default function YogaAllgemeinPage() {
             eine intensive Entspannung des ganzen Körpers.
           </p>
         </div>
-
-        <Image
-          src="/images/yoga4.png"
-          alt="Yoga-Gruppe in der Krieger-Stellung"
-          width={960}
-          height={640}
-          className="rounded-xl object-cover w-full mt-10"
-        />
         </div>
       </div>
     </>

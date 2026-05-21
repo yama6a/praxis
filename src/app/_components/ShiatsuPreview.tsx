@@ -35,7 +35,7 @@ export function ShiatsuPreview() {
           <div className="order-1 lg:order-2 mb-10 lg:mb-0 relative">
             <div className="absolute -inset-4 bg-accent rounded-xl opacity-10 blur-lg" />
             <Image
-              src="/images/shiatsu-treatment.webp"
+              src="/images/20260402_155435.jpg"
               alt="Shiatsu Behandlungsszene"
               width={640}
               height={384}

@@ -12,7 +12,7 @@ export function YogaPreview() {
           <div className="mb-10 lg:mb-0 relative">
             <div className="absolute -inset-4 bg-primary rounded-xl opacity-5 blur-lg" />
             <Image
-              src="/images/yoga-class.webp"
+              src="/images/Yogaraum.jpg"
               alt="Yoga Klasse in Charlottenburg"
               width={640}
               height={384}
