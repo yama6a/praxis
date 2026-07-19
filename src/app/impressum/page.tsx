@@ -43,7 +43,7 @@ export default function ImpressumPage() {
               </div>
             </address>
             <Image
-              src="/images/passfoto-sm.jpg"
+              src="/images/passfoto_2026.jpg"
               alt="Birgit Mähner"
               width={128}
               height={160}
