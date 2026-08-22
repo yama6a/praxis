@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Hero } from "./_components/Hero";
-import { InfoBanner } from "./_components/InfoBanner";
 import { YogaPreview } from "./_components/YogaPreview";
 import { ShiatsuPreview } from "./_components/ShiatsuPreview";
 import { LocalBusinessJsonLd, BreadcrumbJsonLd, WebPageJsonLd } from "@/lib/structured-data";
@@ -22,7 +21,6 @@ export default function HomePage() {
       />
       <BreadcrumbJsonLd items={[{ name: "Startseite", href: "/" }]} />
       <Hero />
-      <InfoBanner />
       <YogaPreview />
       <ShiatsuPreview />
     </>

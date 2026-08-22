@@ -48,13 +48,13 @@ export default function ShiatsuAllgemeinPage() {
         </div>
 
         <div className="text-lg text-gray-700 leading-relaxed">
-          <Image
-            src="/images/shiatsu1.jpg"
-            alt="Shiatsu-Behandlung"
-            width={640}
-            height={480}
-            className="rounded-xl object-cover w-full sm:w-1/3 sm:float-left sm:mr-6 mb-4"
-          />
+          <div
+            lang="ja"
+            className="rounded-xl bg-primary/5 flex flex-nowrap whitespace-nowrap items-center justify-center gap-4 py-12 w-full sm:w-1/3 sm:float-left sm:mr-6 mb-4 text-7xl sm:text-5xl lg:text-6xl font-bold text-primary text-shadow-lg"
+          >
+            <span>指圧</span>
+            <span>指壓</span>
+          </div>
           <h2 className="text-2xl font-display font-bold text-gray-900 mb-4">
             Was ist Shiatsu?
           </h2>

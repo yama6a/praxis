@@ -6,7 +6,7 @@ import { ArrowLink } from "@/components/ArrowLink";
 
 export function YogaPreview() {
   return (
-    <section className="py-16 lg:py-24" id="yoga">
+    <section className="pt-4 pb-16 lg:pt-6 lg:pb-24" id="yoga">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="mb-10 lg:mb-0 relative">
@@ -38,6 +38,10 @@ export function YogaPreview() {
                 "Kurse am Morgen und Abend",
               ]}
             />
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              Präventionskurse der Krankenkassen beginnen jährlich im Januar, im
+              April und Mitte September. Das genaue Datum bitte erfragen.
+            </p>
             <ArrowLink href="/yoga/allgemein" label="Zum Kursplan" />
           </div>
         </div>
