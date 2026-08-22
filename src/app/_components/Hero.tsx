@@ -41,7 +41,7 @@ export function Hero() {
               alt="Buddha Statue vor Yin-Yang Hintergrund"
               width={448}
               height={448}
-              className="relative rounded-2xl w-full max-w-md object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              className="relative rounded-2xl w-3/4 max-w-[21rem] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
               priority
             />
           </div>
