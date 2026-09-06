@@ -24,9 +24,9 @@ describe("InfoBanner", () => {
     expect(screen.getByRole("heading", { name: "Aktuelle Informationen" })).toBeInTheDocument();
   });
 
-  it("renders the retreat content", () => {
+  it("renders the course content", () => {
     render(<InfoBanner />);
-    expect(screen.getByText(/Wochenend-Retreat/)).toBeInTheDocument();
-    expect(screen.getByText(/Kloster Lehnin/)).toBeInTheDocument();
+    expect(screen.getByText(/Neue Yogakurse ab Sept. 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/Kursdauer: 10 Unterrichtstermine/)).toBeInTheDocument();
   });
 });

@@ -6,7 +6,7 @@ import { ArrowLink } from "@/components/ArrowLink";
 
 export function ShiatsuPreview() {
   return (
-    <section className="py-16 lg:py-24" id="shiatsu">
+    <section className="py-16 lg:py-24 bg-surface-light" id="shiatsu">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
