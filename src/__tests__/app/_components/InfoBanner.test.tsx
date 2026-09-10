@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { InfoBanner } from "@/app/_components/InfoBanner";
@@ -9,11 +10,11 @@ global.ResizeObserver = class {
 };
 
 vi.mock("next/image", () => ({
-  default: (props: any) => <img {...props} />,
+  default: (props: ComponentProps<"img">) => <img {...props} />,
 }));
 
 vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: any) => (
+  default: ({ children, href, ...props }: ComponentProps<"a">) => (
     <a href={href} {...props}>{children}</a>
   ),
 }));
