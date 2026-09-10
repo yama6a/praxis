@@ -22,8 +22,8 @@ jobs:
     uses: yama6a/gha/.github/workflows/docker-build-release.yaml@v1
     with:
       node-version: '22'
+      package-manager: pnpm
       build-command: |
-        corepack enable
         pnpm install --frozen-lockfile
         pnpm build
 
