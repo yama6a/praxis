@@ -21,7 +21,7 @@ describe("YogaPreview", () => {
 
   it("renders 3 feature items", () => {
     render(<YogaPreview />);
-    expect(screen.getByText("Hatha Yoga & Vinyasa Flow")).toBeInTheDocument();
+    expect(screen.getByText("Hatha Yoga")).toBeInTheDocument();
     expect(screen.getByText("Kleine Gruppen für individuelle Betreuung")).toBeInTheDocument();
     expect(screen.getByText("Kurse am Morgen und Abend")).toBeInTheDocument();
   });
