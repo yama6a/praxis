@@ -1,9 +1,10 @@
+import type { ComponentProps } from "react";
 import { vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ArrowLink } from "@/components/ArrowLink";
 
 vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: any) => (
+  default: ({ children, href, ...props }: ComponentProps<"a">) => (
     <a href={href} {...props}>{children}</a>
   ),
 }));

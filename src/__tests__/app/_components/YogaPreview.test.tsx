@@ -1,15 +1,16 @@
+import type { ComponentProps } from "react";
 import { vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { YogaPreview } from "@/app/_components/YogaPreview";
 
 vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: any) => (
+  default: ({ children, href, ...props }: ComponentProps<"a">) => (
     <a href={href} {...props}>{children}</a>
   ),
 }));
 
 vi.mock("next/image", () => ({
-  default: (props: any) => <img {...props} />,
+  default: (props: ComponentProps<"img">) => <img {...props} />,
 }));
 
 describe("YogaPreview", () => {
@@ -20,7 +21,7 @@ describe("YogaPreview", () => {
 
   it("renders 3 feature items", () => {
     render(<YogaPreview />);
-    expect(screen.getByText("Hatha Yoga & Vinyasa Flow")).toBeInTheDocument();
+    expect(screen.getByText("Hatha Yoga")).toBeInTheDocument();
     expect(screen.getByText("Kleine Gruppen für individuelle Betreuung")).toBeInTheDocument();
     expect(screen.getByText("Kurse am Morgen und Abend")).toBeInTheDocument();
   });

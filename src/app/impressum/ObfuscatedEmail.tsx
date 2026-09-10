@@ -12,6 +12,9 @@ export function ObfuscatedEmail({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Deliberate: the address is only assembled client-side, or it's sitting in the static/SSR
+    // HTML for any scraper to read.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

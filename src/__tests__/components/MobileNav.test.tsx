@@ -1,3 +1,4 @@
+import type { ComponentProps } from "react";
 import { vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -10,7 +11,7 @@ global.ResizeObserver = class {
 };
 
 vi.mock("next/link", () => ({
-  default: ({ children, href, onClick, ...props }: any) => (
+  default: ({ children, href, onClick, ...props }: ComponentProps<"a">) => (
     <a href={href} onClick={onClick} {...props}>{children}</a>
   ),
 }));
