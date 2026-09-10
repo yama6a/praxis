@@ -1,0 +1,16 @@
+node_modules
+.git
+.github
+.idea
+.vscode
+.DS_Store
+.next
+scripts
+src
+public
+index.html
+*.md
+*.json
+*.json5
+*.ts
+*.tsx
