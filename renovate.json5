@@ -1,0 +1,55 @@
+{
+  // Opens dependency-update PRs for every pin in the repo. Which manager owns what:
+  //   npm             package.json + pnpm-lock.yaml
+  //   dockerfile      the nginx-unprivileged base image
+  //   github-actions  the action pins in .github/workflows/*.yaml
+  // Cadence is the cron in .github/workflows/renovate.yaml, not an internal `schedule`, so a manual
+  // workflow_dispatch works too.
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "config:recommended",
+    ":dependencyDashboard", // one issue listing every pending/failed update (needs repo Issues enabled)
+    "helpers:pinGitHubActionDigestsToSemver", // action pins carry a readable version alongside the digest
+  ],
+  prConcurrentLimit: 12,
+  prHourlyLimit: 0, // no hourly throttle
+  dependencyDashboardTitle: "Renovate dependency dashboard",
+
+  // Automerge through Renovate's own API call, not GitHub's native auto-merge. Renovate waits for a PR's
+  // required CI checks by default, so the combined PR lands on a LATER run once CI is green. That is why the
+  // cron runs every 3h rather than weekly.
+  platformAutomerge: false,
+
+  packageRules: [
+    {
+      // ONE combined, auto-merged PR for every NON-major update, gated on the `ci` check.
+      // WARNING: merging to main runs build-push.yaml, which cuts a new GitHub release, pushes a new
+      // ghcr.io image tag, and opens the deploy PR in offgrid-private. Every automerged bump therefore
+      // ships to the cluster.
+      description: "combine all non-major updates into one auto-merged PR",
+      matchUpdateTypes: ["minor", "patch", "digest", "pin", "lockFileMaintenance"],
+      groupName: "all non-major dependencies",
+      automerge: true,
+    },
+    {
+      // Next majors can change App Router/static-export semantics; a react major moves in lockstep.
+      description: "next and react: their own PR, never automerged on major",
+      matchPackageNames: ["next", "react", "react-dom"],
+      matchUpdateTypes: ["major"],
+      automerge: false,
+    },
+    {
+      // Pin action refs to commit digests, so a moving tag cannot swap the action's code under us.
+      description: "pin github action refs to digests",
+      matchManagers: ["github-actions"],
+      pinDigests: true,
+    },
+    {
+      // nginx-unprivileged:1.31-alpine is a rolling tag whose patch releases move underneath, so a digest
+      // pin is the only way Renovate can track it.
+      description: "pin base images to digests",
+      matchManagers: ["dockerfile"],
+      pinDigests: true,
+    },
+  ],
+}

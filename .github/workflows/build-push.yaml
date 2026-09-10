@@ -1,0 +1,39 @@
+name: build-and-push
+
+# A merged PR is itself a push to main, so this covers both cases.
+on:
+  push:
+    branches: [main]
+
+# Don't run two image builds for main at the same time.
+concurrency:
+  group: build-push-${{ github.ref }}
+  cancel-in-progress: true
+
+# A reusable workflow's jobs can request only what the caller grants here.
+permissions:
+  contents: write # required to create the GitHub release
+  packages: write # required, or the image push fails with permission_denied
+
+jobs:
+  # The Dockerfile only COPYs out/, so the build has to happen here, not inside it: one run on the
+  # runner serves both architectures instead of running next build under QEMU emulation.
+  build:
+    uses: yama6a/gha/.github/workflows/docker-build-release.yaml@v1
+    with:
+      node-version: '22'
+      build-command: |
+        corepack enable
+        pnpm install --frozen-lockfile
+        pnpm build
+
+  # Publishing is only half a deploy: the cluster pins an exact tag, so bump it in the GitOps repo
+  # and let ArgoCD sync.
+  deploy:
+    needs: build
+    uses: yama6a/gha/.github/workflows/deploy-gitops.yaml@v1
+    with:
+      tag: ${{ needs.build.outputs.version }}
+      values-path: argo_apps/workloads/charts/praxis/values.yaml
+    secrets:
+      DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
