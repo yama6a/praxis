@@ -2,7 +2,7 @@
   "name": "mama",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.34.5",
   "scripts": {
     "dev": "next dev",
     "static": "npm run build && npx serve@latest out",
