@@ -27,7 +27,7 @@ describe("InfoBanner", () => {
 
   it("renders the course content", () => {
     render(<InfoBanner />);
-    expect(screen.getByText(/Neue Yogakurse ab Sept. 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/Neue Krankenkassen-Pr.ventionskurse ab Sept. 2026/)).toBeInTheDocument();
     expect(screen.getByText(/Kursdauer: 10 Unterrichtstermine/)).toBeInTheDocument();
   });
 });

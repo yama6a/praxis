@@ -48,11 +48,11 @@ export function InfoBanner() {
 
             <div className="flex-1">
               <h3 className="text-lg font-display font-semibold text-gray-800 mb-3">
-                Neue Yogakurse ab Sept. 2026
+                Neue Krankenkassen-Pr&auml;ventionskurse ab Sept. 2026
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                 <div>
-                  <p className="text-gray-700 font-medium mb-1">Kursbeginn:</p>
+                  <p className="text-gray-700 font-medium mb-1">Kursbeginn jeweils:</p>
                   <ul className="space-y-1 text-gray-700">
                     <li>Montag, 21. Sept., 16:30&ndash;17:45 &amp; 18:00&ndash;19:15</li>
                     <li>Dienstag, 22. Sept., 16:00&ndash;17:15 &amp; 17:30&ndash;18:45</li>
