@@ -2,7 +2,7 @@
   "name": "mama",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@12.3.4",
   "scripts": {
     "dev": "next dev",
     "static": "npm run build && npx serve@latest out",
@@ -13,12 +13,6 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
-    ]
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
