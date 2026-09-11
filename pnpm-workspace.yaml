@@ -1,3 +1,12 @@
-ignoredBuiltDependencies:
-  - sharp
-  - unrs-resolver
+# esbuild and sharp were pnpm.onlyBuiltDependencies in package.json, which pnpm 12 no longer reads.
+# msw and unrs-resolver did not run their scripts under pnpm 10 either; pnpm 12 turns that from a
+# warning into an error unless each one is answered explicitly.
+allowBuilds:
+  esbuild: true
+  msw: false
+  sharp: true
+  unrs-resolver: false
+
+# pnpm 12 defaults this to 24h, which fails the install for any dependency published today and so
+# blocks every Renovate PR that picks up a same-day release until it ages out.
+minimumReleaseAge: 0
