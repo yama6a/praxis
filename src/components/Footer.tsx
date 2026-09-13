@@ -1,6 +1,6 @@
-import { MdPlace, MdPhone, MdEmail } from "react-icons/md";
-import Link from "next/link";
-import { ObfuscatedEmail } from "@/components/ObfuscatedEmail";
+import { MdPlace, MdPhone, MdEmail } from 'react-icons/md';
+import Link from 'next/link';
+import { ObfuscatedEmail } from '@/components/ObfuscatedEmail';
 
 export function Footer() {
   return (
@@ -12,8 +12,8 @@ export function Footer() {
               Praxis Ganzheitliche Körpertherapie
             </h3>
             <p className="text-gray-200 text-sm leading-relaxed mb-4">
-              Ihr Ort für Ruhe, Kraft und ganzheitliche Gesundheit im Herzen von
-              Berlin Charlottenburg.
+              Ihr Ort für Ruhe, Kraft und ganzheitliche Gesundheit im Herzen von Berlin
+              Charlottenburg.
             </p>
           </div>
 
@@ -67,8 +67,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-600 mt-12 pt-8 text-center text-xs text-gray-400">
-          © {new Date().getFullYear()} Praxis Ganzheitliche Körpertherapie. Alle
-          Rechte vorbehalten.
+          © {new Date().getFullYear()} Praxis Ganzheitliche Körpertherapie. Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { StubPage } from "@/components/StubPage";
-import { BreadcrumbJsonLd, WebPageJsonLd } from "@/lib/structured-data";
+import type { Metadata } from 'next';
+import { StubPage } from '@/components/StubPage';
+import { BreadcrumbJsonLd, WebPageJsonLd } from '@/lib/structured-data';
 
 export const metadata: Metadata = {
-  title: "Räumlichkeiten",
+  title: 'Räumlichkeiten',
   description:
-    "Die Räumlichkeiten der Praxis für ganzheitliche Körpertherapie in Berlin Charlottenburg. Knobelsdorffstr. 34.",
-  alternates: { canonical: "/raeumlichkeiten/" },
+    'Die Räumlichkeiten der Praxis für ganzheitliche Körpertherapie in Berlin Charlottenburg. Knobelsdorffstr. 34.',
+  alternates: { canonical: '/raeumlichkeiten/' },
 };
 
 export default function RaeumlichkeitenPage() {
@@ -19,8 +19,8 @@ export default function RaeumlichkeitenPage() {
       />
       <BreadcrumbJsonLd
         items={[
-          { name: "Startseite", href: "/" },
-          { name: "Räumlichkeiten", href: "/raeumlichkeiten/" },
+          { name: 'Startseite', href: '/' },
+          { name: 'Räumlichkeiten', href: '/raeumlichkeiten/' },
         ]}
       />
       <StubPage title="Räumlichkeiten" />

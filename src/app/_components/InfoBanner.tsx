@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Dialog,
   DialogTrigger,
   DialogContent,
   DialogTitle,
   DialogDescription,
-} from "@/components/ui/dialog";
+} from '@/components/ui/dialog';
 
 export function InfoBanner() {
   return (
@@ -33,9 +33,7 @@ export function InfoBanner() {
               </DialogTrigger>
               <DialogContent className="max-w-[90vw] max-h-[90vh]">
                 <DialogTitle className="sr-only">Yogakurs</DialogTitle>
-                <DialogDescription className="sr-only">
-                  Foto aus dem Yogakurs
-                </DialogDescription>
+                <DialogDescription className="sr-only">Foto aus dem Yogakurs</DialogDescription>
                 <Image
                   src="/images/yoga3.jpg"
                   alt="Yogakurs"
@@ -68,14 +66,13 @@ export function InfoBanner() {
                   <p className="text-gray-700">
                     Bei Interesse und f&uuml;r weitere Informationen,
                     <br />
-
                     <Link
                       href="/kontakt"
                       className="text-primary underline underline-offset-2 hover:text-primary/80"
                     >
                       kontaktieren Sie mich
-                    </Link>
-                    {" "}bitte.
+                    </Link>{' '}
+                    bitte.
                   </p>
                 </div>
               </div>

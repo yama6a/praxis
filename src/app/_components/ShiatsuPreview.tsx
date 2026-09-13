@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { MdSpa, MdLocalFlorist } from "react-icons/md";
-import { SectionHeading } from "@/components/SectionHeading";
-import { FeatureList } from "@/components/FeatureList";
-import { ArrowLink } from "@/components/ArrowLink";
+import Image from 'next/image';
+import { MdSpa, MdLocalFlorist } from 'react-icons/md';
+import { SectionHeading } from '@/components/SectionHeading';
+import { FeatureList } from '@/components/FeatureList';
+import { ArrowLink } from '@/components/ArrowLink';
 
 export function ShiatsuPreview() {
   return (
@@ -12,24 +12,20 @@ export function ShiatsuPreview() {
           <div className="order-2 lg:order-1">
             <SectionHeading icon={MdSpa} title="Shiatsu Therapie" />
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Shiatsu ist eine achtsame Körperarbeit aus Japan, die auf den
-              Grundlagen der traditionellen chinesischen Medizin basiert. Durch
-              sanften Druck entlang der Meridiane werden Blockaden gelöst und
-              die Lebensenergie (Qi) wieder zum Fließen gebracht. Erfahren Sie
-              tiefe Entspannung und Regeneration für Körper und Geist.
+              Shiatsu ist eine achtsame Körperarbeit aus Japan, die auf den Grundlagen der
+              traditionellen chinesischen Medizin basiert. Durch sanften Druck entlang der Meridiane
+              werden Blockaden gelöst und die Lebensenergie (Qi) wieder zum Fließen gebracht.
+              Erfahren Sie tiefe Entspannung und Regeneration für Körper und Geist.
             </p>
             <FeatureList
               icon={MdLocalFlorist}
               items={[
-                "Stressreduktion und Burnout-Prävention",
-                "Linderung von Verspannungen",
-                "Stärkung des Immunsystems",
+                'Stressreduktion und Burnout-Prävention',
+                'Linderung von Verspannungen',
+                'Stärkung des Immunsystems',
               ]}
             />
-            <ArrowLink
-              href="/shiatsu/allgemein"
-              label="Behandlung buchen"
-            />
+            <ArrowLink href="/shiatsu/allgemein" label="Behandlung buchen" />
           </div>
 
           <div className="order-1 lg:order-2 mb-10 lg:mb-0 relative">

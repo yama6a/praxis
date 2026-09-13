@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -14,9 +14,8 @@ export function Hero() {
               </span>
             </h1>
             <p className="mt-4 text-lg text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
-              Finden Sie Ihre innere Balance und Stärke. Wir begleiten Sie auf
-              Ihrem Weg zu mehr Gesundheit und Wohlbefinden in Berlin
-              Charlottenburg.
+              Finden Sie Ihre innere Balance und Stärke. Wir begleiten Sie auf Ihrem Weg zu mehr
+              Gesundheit und Wohlbefinden in Berlin Charlottenburg.
             </p>
             <div className="flex justify-center lg:justify-start gap-4">
               <Link

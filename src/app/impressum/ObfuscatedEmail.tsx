@@ -1,14 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-export function ObfuscatedEmail({
-  user,
-  domain,
-}: {
-  user: string;
-  domain: string;
-}) {
+export function ObfuscatedEmail({ user, domain }: { user: string; domain: string }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

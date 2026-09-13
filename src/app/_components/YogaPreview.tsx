@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { MdSelfImprovement, MdCheckCircle } from "react-icons/md";
-import { SectionHeading } from "@/components/SectionHeading";
-import { FeatureList } from "@/components/FeatureList";
-import { ArrowLink } from "@/components/ArrowLink";
+import Image from 'next/image';
+import { MdSelfImprovement, MdCheckCircle } from 'react-icons/md';
+import { SectionHeading } from '@/components/SectionHeading';
+import { FeatureList } from '@/components/FeatureList';
+import { ArrowLink } from '@/components/ArrowLink';
 
 export function YogaPreview() {
   return (
@@ -23,24 +23,22 @@ export function YogaPreview() {
           <div>
             <SectionHeading icon={MdSelfImprovement} title="Yoga Kurse" />
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Entdecken Sie die heilsame Kraft des Yoga. Unsere Kurse sind für
-              Anfänger und Fortgeschrittene gleichermaßen geeignet. Wir legen
-              großen Wert auf eine achtsame Ausführung der Asanas und die
-              Verbindung von Atem und Bewegung. In kleinen Gruppen schaffen wir
-              eine persönliche Atmosphäre, in der Sie vom Alltag abschalten
-              können.
+              Entdecken Sie die heilsame Kraft des Yoga. Unsere Kurse sind für Anfänger und
+              Fortgeschrittene gleichermaßen geeignet. Wir legen großen Wert auf eine achtsame
+              Ausführung der Asanas und die Verbindung von Atem und Bewegung. In kleinen Gruppen
+              schaffen wir eine persönliche Atmosphäre, in der Sie vom Alltag abschalten können.
             </p>
             <FeatureList
               icon={MdCheckCircle}
               items={[
-                "Hatha Yoga",
-                "Kleine Gruppen für individuelle Betreuung",
-                "Kurse am Morgen und Abend",
+                'Hatha Yoga',
+                'Kleine Gruppen für individuelle Betreuung',
+                'Kurse am Morgen und Abend',
               ]}
             />
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-              Präventionskurse der Krankenkassen beginnen jährlich im Januar, im
-              April und Mitte September. Das genaue Datum bitte erfragen.
+              Präventionskurse der Krankenkassen beginnen jährlich im Januar, im April und Mitte
+              September. Das genaue Datum bitte erfragen.
             </p>
             <ArrowLink href="/yoga/allgemein" label="Zum Kursplan" />
           </div>

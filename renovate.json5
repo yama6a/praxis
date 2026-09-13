@@ -10,10 +10,7 @@
   // WARNING: the combined non-major PR automerges, and merging to main runs build-push.yaml, which
   // pushes an image and opens the GitOps deploy PR. Every automerged bump therefore ships the site.
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: [
-    "github>yama6a/gha:default.json5",
-    "github>yama6a/gha:node.json5",
-  ],
+  extends: ["github>yama6a/gha:default.json5", "github>yama6a/gha:node.json5"],
 
   packageRules: [
     {

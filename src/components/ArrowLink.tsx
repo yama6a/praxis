@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { MdArrowForward } from "react-icons/md";
+import Link from 'next/link';
+import { MdArrowForward } from 'react-icons/md';
 
 type ArrowLinkProps = {
   href: string;
