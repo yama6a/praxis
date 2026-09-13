@@ -2,7 +2,6 @@
   "name": "mama",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@12.4.1",
   "scripts": {
     "dev": "next dev",
     "static": "npm run build && npx serve@latest out",
@@ -45,5 +44,8 @@
     "vite": "^8.0.0",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.0.0"
+  },
+  "allowScripts": {
+    "unrs-resolver": false
   }
 }
