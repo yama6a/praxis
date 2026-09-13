@@ -14,24 +14,23 @@ concurrency:
 permissions:
   contents: write # required to create the GitHub release
   packages: write # required, or the image push fails with permission_denied
+  id-token: write # mints the OIDC token the provenance attestation is signed with
+  attestations: write # stores the attestation
 
 jobs:
   # The Dockerfile only COPYs out/, so the build has to happen here, not inside it: one run on the
   # runner serves both architectures instead of running next build under QEMU emulation.
   build:
-    uses: yama6a/gha/.github/workflows/docker-build-release.yaml@v1
+    uses: yama6a/gha/.github/workflows/docker-build-release.yaml@v2
     with:
-      node-version: '22'
-      package-manager: pnpm
-      build-command: |
-        pnpm install --frozen-lockfile
-        pnpm build
+      build-command: npm ci && npm run build
 
   # Publishing is only half a deploy: the cluster pins an exact tag, so bump it in the GitOps repo
   # and let ArgoCD sync.
   deploy:
     needs: build
-    uses: yama6a/gha/.github/workflows/deploy-gitops.yaml@v1
+    permissions: {} # the block above is workflow-wide; nothing here builds or pushes
+    uses: yama6a/gha/.github/workflows/deploy-gitops.yaml@v2
     with:
       tag: ${{ needs.build.outputs.version }}
       values-path: argo_apps/workloads/charts/praxis/values.yaml

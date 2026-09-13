@@ -1,20 +1,18 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { MdPlace, MdPhone, MdEmail, MdBadge, MdGavel } from "react-icons/md";
-import { ObfuscatedEmail } from "./ObfuscatedEmail";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { MdPlace, MdPhone, MdEmail, MdBadge, MdGavel } from 'react-icons/md';
+import { ObfuscatedEmail } from './ObfuscatedEmail';
 
 export const metadata: Metadata = {
-  title: "Impressum",
-  robots: "noindex",
+  title: 'Impressum',
+  robots: 'noindex',
 };
 
 export default function ImpressumPage() {
   return (
     <div className="pt-28 pb-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-display font-bold text-primary mb-10">
-          Impressum
-        </h1>
+        <h1 className="text-4xl font-display font-bold text-primary mb-10">Impressum</h1>
 
         {/* Identity + Contact */}
         <div className="bg-white rounded-2xl shadow-sm border border-border p-6 mb-4">
@@ -23,15 +21,11 @@ export default function ImpressumPage() {
           </h2>
           <div className="flex gap-6">
             <address className="not-italic text-gray-700 space-y-1 flex-1">
-              <p className="text-lg font-display font-bold text-gray-900">
-                Birgit Mähner
-              </p>
+              <p className="text-lg font-display font-bold text-gray-900">Birgit Mähner</p>
               <p>Heilpraktikerin</p>
               <div className="flex items-start gap-2 pt-2">
                 <MdPlace className="text-primary mt-0.5 shrink-0" />
-                <span>
-                  Knobelsdorffstr. 34, D-14059 Berlin-Charlottenburg
-                </span>
+                <span>Knobelsdorffstr. 34, D-14059 Berlin-Charlottenburg</span>
               </div>
               <div className="flex items-center gap-2">
                 <MdPhone className="text-primary shrink-0" />
@@ -62,9 +56,7 @@ export default function ImpressumPage() {
               Zuständige Aufsichtsbehörde
             </h2>
             <address className="not-italic text-gray-700 space-y-0.5">
-              <p className="font-medium">
-                Senatsverwaltung für Gesundheit und Soziales Berlin
-              </p>
+              <p className="font-medium">Senatsverwaltung für Gesundheit und Soziales Berlin</p>
               <p>Fehrbelliner Platz 1</p>
               <p>10707 Berlin</p>
               <p>Tel. 030 / 90229-0</p>
@@ -76,9 +68,7 @@ export default function ImpressumPage() {
               Zuständiger Verband
             </h2>
             <address className="not-italic text-gray-700 space-y-0.5">
-              <p className="font-medium">
-                Fachverband Deutscher Heilpraktiker
-              </p>
+              <p className="font-medium">Fachverband Deutscher Heilpraktiker</p>
               <p>Landesverband Berlin-Brandenburg e.V.</p>
               <p>Mommsenstr. 45, 10629 Berlin</p>
               <p>Tel.: 030 / 323 30 50</p>
@@ -104,13 +94,10 @@ export default function ImpressumPage() {
           <div className="flex gap-3 items-start">
             <MdBadge className="text-primary text-xl mt-0.5 shrink-0" />
             <div>
-              <h2 className="font-bold text-gray-900 mb-1">
-                Erlaubnis zur Ausübung der Heilkunde
-              </h2>
+              <h2 className="font-bold text-gray-900 mb-1">Erlaubnis zur Ausübung der Heilkunde</h2>
               <p>
-                Die Erlaubnis zur Ausübung der Heilkunde ohne Bestallung wurde
-                im Februar 1994 vom Gesundheitsamt Berlin-Schöneberg durch den
-                Amtsarzt Dr. Otto erteilt.
+                Die Erlaubnis zur Ausübung der Heilkunde ohne Bestallung wurde im Februar 1994 vom
+                Gesundheitsamt Berlin-Schöneberg durch den Amtsarzt Dr. Otto erteilt.
               </p>
             </div>
           </div>
@@ -120,16 +107,13 @@ export default function ImpressumPage() {
           <div className="flex gap-3 items-start">
             <MdGavel className="text-primary text-xl mt-0.5 shrink-0" />
             <div>
-              <h2 className="font-bold text-gray-900 mb-1">
-                Berufsrechtliche Regelungen
-              </h2>
+              <h2 className="font-bold text-gray-900 mb-1">Berufsrechtliche Regelungen</h2>
               <p>
-                Die Tätigkeit als Heilpraktikerin basiert auf dem
-                Heilpraktikergesetz und der ersten Durchführungsverordnung zum
-                Heilpraktikergesetz. Berufsständische Regelungen befinden sich
-                in der Berufsordnung für Heilpraktiker und der Ethikerklärung
-                des Fachverbandes Deutscher Heilpraktiker. Alle Regelungen
-                können auf der Homepage des FDH eingesehen werden:{" "}
+                Die Tätigkeit als Heilpraktikerin basiert auf dem Heilpraktikergesetz und der ersten
+                Durchführungsverordnung zum Heilpraktikergesetz. Berufsständische Regelungen
+                befinden sich in der Berufsordnung für Heilpraktiker und der Ethikerklärung des
+                Fachverbandes Deutscher Heilpraktiker. Alle Regelungen können auf der Homepage des
+                FDH eingesehen werden:{' '}
                 <a
                   href="https://www.heilpraktiker.org"
                   target="_blank"

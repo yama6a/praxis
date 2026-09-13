@@ -1,27 +1,32 @@
-import type { ComponentProps } from "react";
-import { vi } from "vitest";
-import { render, screen } from "@testing-library/react";
-import { ArrowLink } from "@/components/ArrowLink";
+import type { ComponentProps } from 'react';
+import { vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { ArrowLink } from '@/components/ArrowLink';
 
-vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: ComponentProps<"a">) => (
-    <a href={href} {...props}>{children}</a>
+vi.mock('next/link', () => ({
+  default: ({ children, href, ...props }: ComponentProps<'a'>) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
   ),
 }));
 
-describe("ArrowLink", () => {
-  it("renders the label", () => {
+describe('ArrowLink', () => {
+  it('renders the label', () => {
     render(<ArrowLink href="/yoga/allgemein" label="Zum Kursplan" />);
-    expect(screen.getByText("Zum Kursplan")).toBeInTheDocument();
+    expect(screen.getByText('Zum Kursplan')).toBeInTheDocument();
   });
 
-  it("has the correct href", () => {
+  it('has the correct href', () => {
     render(<ArrowLink href="/yoga/allgemein" label="Zum Kursplan" />);
-    expect(screen.getByText("Zum Kursplan").closest("a")).toHaveAttribute("href", "/yoga/allgemein");
+    expect(screen.getByText('Zum Kursplan').closest('a')).toHaveAttribute(
+      'href',
+      '/yoga/allgemein',
+    );
   });
 
-  it("renders an arrow icon", () => {
+  it('renders an arrow icon', () => {
     const { container } = render(<ArrowLink href="/yoga/allgemein" label="Zum Kursplan" />);
-    expect(container.querySelector("svg")).toBeInTheDocument();
+    expect(container.querySelector('svg')).toBeInTheDocument();
   });
 });

@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // base64-encoded to prevent scraping from static HTML
-const E = "bWFlaG5lci5iaXJnaXRAZ21haWwuY29t";
+const E = 'bWFlaG5lci5iaXJnaXRAZ21haWwuY29t';
 
 export function ObfuscatedEmail() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     // Deliberate: the decode must happen client-side only, or the address is sitting in the
@@ -17,5 +17,9 @@ export function ObfuscatedEmail() {
 
   if (!email) return null;
 
-  return <a href={`mailto:${email}`} className="hover:text-white">{email}</a>;
+  return (
+    <a href={`mailto:${email}`} className="hover:text-white">
+      {email}
+    </a>
+  );
 }

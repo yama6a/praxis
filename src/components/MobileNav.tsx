@@ -1,17 +1,13 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Link from "next/link";
-import { MdMenu, MdExpandMore } from "react-icons/md";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { navigationItems } from "@/lib/navigation-data";
+import { useState } from 'react';
+import Link from 'next/link';
+import { MdMenu, MdExpandMore } from 'react-icons/md';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { navigationItems } from '@/lib/navigation-data';
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -41,7 +37,7 @@ export function MobileNav() {
         </SheetTitle>
         <nav className="flex flex-col py-4">
           {navigationItems.map((item) => {
-            if (item.kind === "link") {
+            if (item.kind === 'link') {
               return (
                 <Link
                   key={item.label}

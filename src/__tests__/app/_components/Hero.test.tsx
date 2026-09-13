@@ -1,37 +1,41 @@
-import type { ComponentProps } from "react";
-import { vi } from "vitest";
-import { render, screen } from "@testing-library/react";
-import { Hero } from "@/app/_components/Hero";
+import type { ComponentProps } from 'react';
+import { vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
+import { Hero } from '@/app/_components/Hero';
 
-vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: ComponentProps<"a">) => (
-    <a href={href} {...props}>{children}</a>
+vi.mock('next/link', () => ({
+  default: ({ children, href, ...props }: ComponentProps<'a'>) => (
+    <a href={href} {...props}>
+      {children}
+    </a>
   ),
 }));
 
-vi.mock("next/image", () => ({
-  default: (props: ComponentProps<"img">) => <img {...props} />,
+vi.mock('next/image', () => ({
+  default: (props: ComponentProps<'img'>) => <img {...props} />,
 }));
 
-describe("Hero", () => {
-  it("renders the main heading", () => {
+describe('Hero', () => {
+  it('renders the main heading', () => {
     render(<Hero />);
-    expect(screen.getByText("Herzlich Willkommen")).toBeInTheDocument();
+    expect(screen.getByText('Herzlich Willkommen')).toBeInTheDocument();
   });
 
-  it("renders the subtitle", () => {
+  it('renders the subtitle', () => {
     render(<Hero />);
-    expect(screen.getByText("in Ihrer Praxis für Ganzheitliche Körpertherapie")).toBeInTheDocument();
+    expect(
+      screen.getByText('in Ihrer Praxis für Ganzheitliche Körpertherapie'),
+    ).toBeInTheDocument();
   });
 
-  it("renders CTA buttons", () => {
+  it('renders CTA buttons', () => {
     render(<Hero />);
-    expect(screen.getByText("Termin vereinbaren")).toBeInTheDocument();
-    expect(screen.getByText("Mehr erfahren")).toBeInTheDocument();
+    expect(screen.getByText('Termin vereinbaren')).toBeInTheDocument();
+    expect(screen.getByText('Mehr erfahren')).toBeInTheDocument();
   });
 
-  it("renders the hero image with alt text", () => {
+  it('renders the hero image with alt text', () => {
     render(<Hero />);
-    expect(screen.getByAltText("Buddha Statue vor Yin-Yang Hintergrund")).toBeInTheDocument();
+    expect(screen.getByAltText('Buddha Statue vor Yin-Yang Hintergrund')).toBeInTheDocument();
   });
 });

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,13 +10,13 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { navigationItems } from "@/lib/navigation-data";
-import { MobileNav } from "@/components/MobileNav";
+} from '@/components/ui/navigation-menu';
+import { cn } from '@/lib/utils';
+import { navigationItems } from '@/lib/navigation-data';
+import { MobileNav } from '@/components/MobileNav';
 
 const flatNavStyle =
-  "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent text-gray-700 hover:text-primary gap-2 flex-row";
+  'bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent text-gray-700 hover:text-primary gap-2 flex-row';
 
 export function Navbar() {
   return (
@@ -43,7 +43,7 @@ export function Navbar() {
               <NavigationMenuList>
                 {navigationItems.map((item) => (
                   <NavigationMenuItem key={item.label}>
-                    {item.kind === "link" ? (
+                    {item.kind === 'link' ? (
                       <NavigationMenuLink
                         asChild
                         className={cn(navigationMenuTriggerStyle(), flatNavStyle)}
