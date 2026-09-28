@@ -1,6 +1,6 @@
 # nginx-unprivileged rather than nginx: runs as uid 101 and writes its caches under /tmp, so the
 # pod can keep the cluster's restricted securityContext instead of needing root to bind :80.
-FROM nginxinc/nginx-unprivileged:1.31-alpine@sha256:6a23acdfca2b9cfbcec61419e3f1426bcbedb91362f2f19306a8567423bb4612
+FROM nginxinc/nginx-unprivileged:1.31-alpine@sha256:26b0bf6fbf07297983cb341998d79c831508787de26627dd2a112321b9c3a4af
 
 # out/ is built on the runner, not here, so one build serves both architectures.
 COPY out/ /usr/share/nginx/html
